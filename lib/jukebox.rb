@@ -46,16 +46,18 @@ end
 def run(songs)
   puts "Please enter a command:"
   response = gets.downcase.strip
-  loop do
-    if response == "list"
+  case response
+  when "list"
       list(songs)
-    elsif response == "help"
+  when "help"
       help
-    elsif response == "play"
-      play(songs)
-    elsif response == "exit"
+  when == "play"
+  play(songs)
+  when == "exit"
       exit_jukebox
       break
+    else
+      help
     end
   end
 end
